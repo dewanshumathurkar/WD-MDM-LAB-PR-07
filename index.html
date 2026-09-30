@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-red-500 to-blue-500 flex items-center justify-center">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg w-96">
+
+        <h2 class="text-2xl font-bold text-center text-red-500 mb-6">
+            Admission Portal
+        </h2>
+
+        <p class="text-center mb-5 text-gray-800">
+            Frequently Asked Questions
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded">
+                What is the admission process?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                Admission is based on eligibility and entrance requirements.
+            </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded">
+               What is the fee structure?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+                Fees vary according to the course and category.
+            </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-3">
+            <button class="question w-full text-left p-3 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded">
+               When does the admission process start?
+            </button>
+
+            <p class="answer hidden p-3 bg-purple-50">
+               Admission dates are announced according to the academic schedule.
+            </p>
+        </div>
+
+    </div>
+   
+
+
+    <script>
+
+        // Get all questions
+        let questions = document.querySelectorAll(".question");
+
+        // Add click event to each question
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                // Get the answer
+                let answer = question.nextElementSibling;
+
+                // Show / Hide answer
+                answer.classList.toggle("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
